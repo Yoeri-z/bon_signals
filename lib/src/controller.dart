@@ -3,7 +3,7 @@ import 'dart:collection';
 import 'package:basic_interfaces/basic_interfaces.dart';
 import 'package:bon_signals/bon_signals.dart';
 
-class Controller implements Disposable {
+abstract class Controller implements Disposable {
   final _signals = HashMap.of(<int, ReadonlySignal>{});
   EffectCleanup? _cleanup;
   final _effects = <EffectCleanup>[];
